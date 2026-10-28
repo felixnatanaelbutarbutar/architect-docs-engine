@@ -17,7 +17,7 @@ Update dependent files when a source decision changes. Define source IDs in thei
 5. **DATA_MODEL.md:** actual entities/columns/types, keys, indexes, nullability, retention and migration evidence; otherwise explain why persistence is absent.
 6. **VALIDATION_RULES.md:** grounded fields, type/requiredness/range, normalization, authority, safe errors and accessibility; no invented regex.
 7. **API_CONTRACT.md:** real transport/interface inventory, IDs, payloads, auth, status/error matrix, compatibility, pagination/idempotency only when relevant.
-8. **UI.md:** preserve existing system; for proposed UI provide concrete tokens, type/spacing, components, responsive and interaction states. Headless projects explain N/A.
+8. **UI.md:** preserve existing system; define product-specific visual intent and rationale, semantic color/type/spacing tokens, task-specific layout, consistent purposeful iconography, responsive/component states, and a rendered visual review gate. Avoid unsupported decorative defaults and fabricated brand/data. Headless projects explain N/A.
 9. **UX.md:** users, task flows, primary-view states, error/recovery and keyboard/screen-reader needs; document operator/CLI journeys for headless tools.
 10. **AGENTS.md:** target repository map, observed commands/conventions, safe edit rules, secrets, verification, forbidden actions and definition of done.
 11. **PROMPTS.md:** actual prompt registry/schema/trust/evaluation only for runtime AI; otherwise useful development/review patterns and explicit N/A.

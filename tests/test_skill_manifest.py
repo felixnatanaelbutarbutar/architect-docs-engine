@@ -14,6 +14,14 @@ class SkillManifestTests(unittest.TestCase):
     def test_skill_resources_and_frontmatter_are_valid(self):
         self.assertTrue(validate_skill()["ok"])
 
+    def test_visual_guidance_has_antigeneric_and_rendered_review_rules(self):
+        guide = (REPO / ".agents/skills/architect-docs-engine/references/design-and-accessibility.md").read_text(encoding="utf-8")
+        self.assertIn("Anti-generic visual guardrails", guide)
+        self.assertIn("Do not default to purple/blue gradients", guide)
+        self.assertIn("Do not add decorative icons", guide)
+        self.assertIn("Visual review gate", guide)
+        self.assertIn("does not itself render or certify a frontend", guide)
+
     def test_installer_copies_skill_and_is_idempotent(self):
         with tempfile.TemporaryDirectory(dir=REPO) as temp:
             target = Path(temp) / "target"

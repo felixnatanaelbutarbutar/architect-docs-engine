@@ -9,7 +9,7 @@
     {"file":"DATA_MODEL.md","title":"Data model","required_headings":["Data inventory","Entities and relationships","Lifecycle and retention","Not applicable or unresolved"]},
     {"file":"VALIDATION_RULES.md","title":"Domain invariants","required_headings":["Input inventory","Validation rules","Errors and accessibility","Not applicable or unresolved"]},
     {"file":"API_CONTRACT.md","title":"Interface contracts","required_headings":["Interface inventory","Contracts","Errors and compatibility","Not applicable or unresolved"]},
-    {"file":"UI.md","title":"Visual system","required_headings":["Current interface evidence","Design tokens","Component and state rules","Not applicable or unresolved"]},
+    {"file":"UI.md","title":"Visual system","required_headings":["Current interface evidence","Design intent and constraints","Design tokens","Layout, components and iconography","Component and state rules","Visual review checklist","Not applicable or unresolved"]},
     {"file":"UX.md","title":"User journeys and states","required_headings":["Users and tasks","Journey flows","Interaction states","Accessibility and recovery"]},
     {"file":"AGENTS.md","title":"Target-project agent guidance","required_headings":["Repository map","Working rules","Commands and verification","Definition of done"]},
     {"file":"PROMPTS.md","title":"AI or developer prompts","required_headings":["Runtime AI inventory","Prompt and developer patterns","Trust and evaluation","Not applicable or unresolved"]},

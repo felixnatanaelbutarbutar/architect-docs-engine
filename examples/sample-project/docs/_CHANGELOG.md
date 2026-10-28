@@ -1,6 +1,10 @@
 # Documentation changelog
 
 ## Unreleased
+- **2026-10-28 17:04:51 UTC:** expanded the UI blueprint with evidence-based visual intent, anti-generic color/layout/icon rules, and a rendered-review checklist; updated the headless fixture's UI documentation and reran validation.
+- Reason: reduce generic-looking UI specifications while making it clear that documentation cannot guarantee rendered quality.
+- Related IDs: no new UI ID; this fixture has no visual interface.
+- Reversibility: documentation-only; later UI evidence can replace the non-applicability notes.
 - **2026-10-28 16:32:03 UTC:** reran the final verification commands and refreshed the audit, test, and traceability run records.
 - Reason: keep the fixture record aligned with the final `BLOCKED` readiness status and verified mechanical checks.
 - Related IDs: REQ-001, REQ-002, NFR-001, US-001, US-002, EP-001, EP-002, MODEL-001, FLOW-001, TC-001–TC-004.

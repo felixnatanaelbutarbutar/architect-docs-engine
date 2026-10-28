@@ -43,7 +43,7 @@ Semantic interpretation and writing are performed by the AI agent. Python script
 
 1. **Identify and inspect.** Run `python .agents/skills/architect-docs-engine/scripts/cli.py inspect --project <target>`; inspect brief, relevant manifests, source, tests and docs yourself. Do not expose secret values.
 2. **Plan and model.** Classify project surfaces and evidence; establish stable IDs and many-to-many links before writing. Explain unresolved choices without blocking unrelated docs.
-3. **Write or update.** Follow [the dependency order and per-file blueprint](references/documentation-blueprints.md). Keep existing IDs; only change supported sections. For `plan`, `diff`, or `dry-run`, do not write.
+3. **Write or update.** Follow [the dependency order and per-file blueprint](references/documentation-blueprints.md). For applicable UI work, read [design and accessibility guidance](references/design-and-accessibility.md), justify visual choices from product context, and require rendered review when an implementation is available. Keep existing IDs; only change supported sections. For `plan`, `diff`, or `dry-run`, do not write.
 4. **Validate.** Run `validate-skill`, `audit --project <target>`, and `traceability --project <target>` from this repository root. An optional `snapshot --project <target> --write` stores safe source hashes so later audits can flag stale docs; review before replacing a snapshot. Inspect findings and repair only safe, evidence-backed defects.
 5. **Hand off.** Summarize changed docs, evidence, exact checks and results, warnings, unresolved blockers and review actions. A complete 21-file suite does not by itself mean implementation-ready.
 

@@ -39,6 +39,7 @@ Architect Docs Engine establishes a repeatable workflow that separates semantic 
 - **Support different application types.** API-only services, web apps, CLI tools, data systems, and Agentic AI/LLM applications can all be documented. For agentic systems, cover prompts, tool/MCP contracts, orchestration, memory, evaluation, and execution safeguards. Non-applicable sections receive a technical explanation, not invented features.
 - **Update deliberately.** Detect document impacts, keep stable IDs, and review changes before replacing existing content.
 - **Audit documentation quality.** Check files, ID consistency, Markdown links, suspicious secrets, unresolved design decisions, and evidence gaps.
+- **Set visual guardrails.** Tie colors, typography, spacing, layout, and icons to user tasks and brand evidence; reject decorative defaults without a reason and include a rendered-review checklist.
 - **Use portable, readable files.** Generated docs remain plain Markdown and Mermaid rather than depending on a proprietary documentation server.
 
 ## How it works
@@ -375,6 +376,8 @@ The auditing approach separates **structural validity** from **architecture read
 
 A requirement may map to multiple API endpoints and several tests. API-less and UI-less requirements are valid when the absence is explicitly justified. If important facts are missing, the skill should write a specific `Unresolved` statement and report an implementation-readiness gap, **not invent an endpoint or measured SLO**.
 
+For UI work, the `UI.md` brief also requires product-specific design intent, purposeful iconography, semantic tokens, anti-generic visual checks, and rendered review when an implementation is available. The skill can improve the specification; it cannot guarantee the final visual quality without inspecting the actual rendered interface.
+
 Audit status distinguishes `PASS` (no findings), `PASS_WITH_WARNINGS` (review needed), `BLOCKED` (required evidence or decisions are missing for readiness), and `FAIL` (a hard failure was found). A blocked readiness result is distinct from a mechanical document failure.
 
 The 21 documents are a documentation contract, not proof that the application itself has been built or that security compliance has been independently certified.
@@ -393,7 +396,7 @@ python .agents/skills/architect-docs-engine/scripts/cli.py validate-config --pro
 python .agents/skills/architect-docs-engine/scripts/cli.py snapshot --project ./examples/sample-project --dry-run
 ```
 
-The repository's `.github/workflows/ci.yml` runs both offline test suites, validates the skill and sample config, and audits the 21-file fixture plus traceability on pushes and pull requests. The workflow has not run remotely because this repository has not been published; there is no CI status badge.
+The repository's `.github/workflows/ci.yml` runs both offline test suites, validates the skill and sample config, and audits the 21-file fixture plus traceability on pushes and pull requests. The repository is published; check the GitHub Actions page for the latest remote run. No CI status badge is included until a run is confirmed.
 
 ## Troubleshooting
 
@@ -419,7 +422,7 @@ License: MIT. See [LICENSE](LICENSE).
 
 ## Roadmap and status
 
-Status: local repository build is complete at version 0.1.0. GitHub publication and remote CI execution have not happened. There is no committed release schedule; these are ideas under consideration, not promised features:
+Status: repository version 0.1.0 is published on GitHub. Remote CI execution has not been verified for the latest commit. There is no committed release schedule; these are ideas under consideration, not promised features:
 
 - Additional agent host adapters validated against official host behavior.
 - Optional schema exports such as OpenAPI/JSON Schema diff reports.
