@@ -1,6 +1,14 @@
 # Documentation changelog
 
 ## Unreleased
+- **2026-10-28 17:18:40 UTC:** reran the full suite, fixture suite, skill/config/docs/audit/trace checks after the security and form UX updates; refreshed this audit record.
+- Reason: verify the expanded security and UX blueprints while keeping the example explicitly headless and network-free.
+- Related IDs: no new security or UI ID; the fixture still has no network surface, agent, or visual interface.
+- Reversibility: documentation-only; later evidence and test runs can replace the recorded results.
+- **2026-10-28 17:17:45 UTC:** expanded the security and UX blueprints for object authorization, bot/resource abuse, agent tool boundaries, and page/inline forms by default; updated the fixture's SECURITY/UX documentation and reran audits.
+- Reason: make security gaps and form-placement choices explicit instead of relying on generic advice or popup defaults.
+- Related IDs: no new security or UI ID; the fixture still has no network surface, agent, or visual interface.
+- Reversibility: documentation-only; source-backed decisions can replace these constraints when an actual adapter or UI is designed.
 - **2026-10-28 17:04:51 UTC:** expanded the UI blueprint with evidence-based visual intent, anti-generic color/layout/icon rules, and a rendered-review checklist; updated the headless fixture's UI documentation and reran validation.
 - Reason: reduce generic-looking UI specifications while making it clear that documentation cannot guarantee rendered quality.
 - Related IDs: no new UI ID; this fixture has no visual interface.

@@ -18,10 +18,10 @@ Update dependent files when a source decision changes. Define source IDs in thei
 6. **VALIDATION_RULES.md:** grounded fields, type/requiredness/range, normalization, authority, safe errors and accessibility; no invented regex.
 7. **API_CONTRACT.md:** real transport/interface inventory, IDs, payloads, auth, status/error matrix, compatibility, pagination/idempotency only when relevant.
 8. **UI.md:** preserve existing system; define product-specific visual intent and rationale, semantic color/type/spacing tokens, task-specific layout, consistent purposeful iconography, responsive/component states, and a rendered visual review gate. Avoid unsupported decorative defaults and fabricated brand/data. Headless projects explain N/A.
-9. **UX.md:** users, task flows, primary-view states, error/recovery and keyboard/screen-reader needs; document operator/CLI journeys for headless tools.
+9. **UX.md:** users, task flows, page/inline form placement by default, explicit limits on popup/modal forms, primary-view states, error/recovery and keyboard/screen-reader needs; document operator/CLI journeys for headless tools.
 10. **AGENTS.md:** target repository map, observed commands/conventions, safe edit rules, secrets, verification, forbidden actions and definition of done.
 11. **PROMPTS.md:** actual prompt registry/schema/trust/evaluation only for runtime AI; otherwise useful development/review patterns and explicit N/A.
-12. **SECURITY.md:** scope, threat/trust boundaries, auth, input handling, secret lifecycle, relevant OWASP risks, supply chain, logs, retention and open risks.
+12. **SECURITY.md:** evidence-based assets/trust boundaries, identity/object authorization, bot/abuse and resource limits, agent/tool controls where relevant, input/data/secrets, supply chain, verification, incident response and residual risks. Read the security reference; do not claim invulnerability or compliance without evidence.
 13. **SEED.md:** synthetic deterministic fixtures, reset safety and production separation; otherwise test fixture generation.
 14. **IMPLEMENTATION.md:** ordered atomic milestones, prerequisites, modules, test gates, reversibility and clear proposed/current status.
 15. **TESTING.md:** actual commands and test evidence; `TC` cases with preconditions/action/expected result; tests remain Not run until run.

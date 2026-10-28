@@ -40,6 +40,8 @@ Architect Docs Engine establishes a repeatable workflow that separates semantic 
 - **Update deliberately.** Detect document impacts, keep stable IDs, and review changes before replacing existing content.
 - **Audit documentation quality.** Check files, ID consistency, Markdown links, suspicious secrets, unresolved design decisions, and evidence gaps.
 - **Set visual guardrails.** Tie colors, typography, spacing, layout, and icons to user tasks and brand evidence; reject decorative defaults without a reason and include a rendered-review checklist.
+- **Plan for abuse and agentic risks.** Model object-level authorization, bot abuse, resource exhaustion, prompt injection, tool misuse, least privilege, and verification steps without claiming a design is invulnerable.
+- **Keep forms in context.** Use a page or inline form by default; do not turn ordinary forms into modal/popup flows without an explicit reason.
 - **Use portable, readable files.** Generated docs remain plain Markdown and Mermaid rather than depending on a proprietary documentation server.
 
 ## How it works
@@ -75,7 +77,7 @@ architect-docs-engine/
 ├── .github/workflows/ci.yml
 ├── .agents/skills/architect-docs-engine/
 │   ├── SKILL.md
-│   ├── references/                   # operating modes, blueprints, evidence, IDs, audit, design, AI, updates
+│   ├── references/                   # modes, blueprints, evidence, IDs, audits, design/UX, security/abuse, agentic AI, updates
 │   ├── assets/                       # config schema/example, 21-file manifest and 21 templates
 │   └── scripts/                      # CLI, installer, scanner, config/docs/skill validators, snapshot, traceability, audit report
 ├── examples/
@@ -376,7 +378,9 @@ The auditing approach separates **structural validity** from **architecture read
 
 A requirement may map to multiple API endpoints and several tests. API-less and UI-less requirements are valid when the absence is explicitly justified. If important facts are missing, the skill should write a specific `Unresolved` statement and report an implementation-readiness gap, **not invent an endpoint or measured SLO**.
 
-For UI work, the `UI.md` brief also requires product-specific design intent, purposeful iconography, semantic tokens, anti-generic visual checks, and rendered review when an implementation is available. The skill can improve the specification; it cannot guarantee the final visual quality without inspecting the actual rendered interface.
+For UI work, the `UI.md` brief requires product-specific design intent, purposeful iconography, semantic tokens, anti-generic visual checks, and rendered review when an implementation is available. The `UX.md` guidance uses page/inline forms by default instead of popups and covers accessible validation/recovery. The skill can improve the specification; it cannot guarantee the final visual quality without inspecting the actual rendered interface.
+
+For security, the `SECURITY.md` brief asks for threat-specific controls against broken object access, bot/credential abuse, resource exhaustion, and (when present) agent prompt injection and tool misuse. It prioritizes deterministic authorization and least privilege outside the model. The skill organizes security requirements and tests; it cannot guarantee a system is safe or substitute for implementation review and security testing.
 
 Audit status distinguishes `PASS` (no findings), `PASS_WITH_WARNINGS` (review needed), `BLOCKED` (required evidence or decisions are missing for readiness), and `FAIL` (a hard failure was found). A blocked readiness result is distinct from a mechanical document failure.
 

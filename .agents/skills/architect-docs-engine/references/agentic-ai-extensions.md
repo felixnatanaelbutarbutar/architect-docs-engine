@@ -1,6 +1,6 @@
 # Agentic AI, MCP and LLM extensions
 
-Apply these checks only when the target actually uses or explicitly proposes the component. Keep the same 21 output docs; do not create a twenty-second file. Every proposal remains marked Proposed until approved.
+Apply these checks only when the target actually uses or explicitly proposes the component. Keep the same 21 output docs; do not create a twenty-second file. Every proposal remains marked Proposed until approved. For detailed threat analysis, use [security and abuse resistance](security-and-abuse-resistance.md); prompts are not an authorization boundary.
 
 | Concern | Canonical docs | Required details |
 | --- | --- | --- |
@@ -14,5 +14,7 @@ Apply these checks only when the target actually uses or explicitly proposes the
 | Agent UX | UX, UI, ACCEPTANCE | Approval previews, queued/running/success/failure, provenance/uncertainty, cancellation, takeover and partial recovery |
 
 Define `AGENT-###`, `TOOL-###`, `PROMPT-###`, and `EVAL-###` only when those objects exist; canonical definitions belong in PRD, API_CONTRACT, PROMPTS and TESTING respectively. Traceability remains many-to-many.
+
+Every tool must have a named owner, narrowly scoped identity, allowlisted capability, validated argument schema, explicit side effects, timeout/resource budget, and server-side authorization. Require user confirmation before high-impact external side effects. Treat prompt injection as a residual risk: isolate untrusted context, validate outputs, and ensure tool permissions limit impact even when the model follows malicious input. Do not rely on system-prompt secrecy or model refusal as the sole control.
 
 For relevant APIs, include concrete payloads and status/error semantics (400/401/403/404/409/422/429/500 as applicable), pagination and idempotency rules. Choose RFC 9457 only when grounded or proposed. Discuss cookie/session flags and RBAC/ABAC only where relevant. Document exact database/ORM types and retention only from evidence. Never invent exact values silently.

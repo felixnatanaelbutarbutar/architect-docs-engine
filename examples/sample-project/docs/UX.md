@@ -13,6 +13,9 @@ flowchart LR
   Store -->|GET selector| List[Return current instance items]
 ```
 
+## Form placement and overlays
+**Not applicable —** the fixture has no visual forms, route, modal dialog, or popup. If a UI is later proposed, use a normal page/route for a primary or multi-field form and inline placement for short contextual tasks; do not open a modal/popup form by default.
+
 ## Interaction states
 - Create: valid input returns a record; invalid JSON/field or oversize body returns an error object.
 - List: returns an empty list before creation and records after creation; no pagination or persistence exists.

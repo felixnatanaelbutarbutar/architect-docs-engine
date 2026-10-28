@@ -19,4 +19,4 @@ Edges are many-to-many: one user journey covers create/list operations; one unit
 - A dedicated empty-list test and malformed-JSON test are not in the current test file; add them if those edge cases become release gates.
 
 ## Audit counts
-Last recorded traceability check: **2026-10-28 17:04:51 UTC**. Counts: 14 defined, 14 referenced, 14 covered, 0 orphaned, 0 dangling, 0 duplicate, 10 non-applicable mappings with technical reasons, and 21 unresolved statements. See the detailed run record in [_AUDIT_REPORT](_AUDIT_REPORT.md).
+Last recorded traceability check: **2026-10-28 17:18:40 UTC**. Counts: 14 defined, 14 referenced, 14 covered, 0 orphaned, 0 dangling, 0 duplicate, 10 non-applicable mappings with technical reasons, and 23 unresolved statements. See the detailed run record in [_AUDIT_REPORT](_AUDIT_REPORT.md).

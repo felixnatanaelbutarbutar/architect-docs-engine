@@ -10,7 +10,8 @@ from common import SKILL_ROOT, emit
 
 REQUIRED = ["SKILL.md", "references/operating-modes.md", "references/documentation-blueprints.md",
             "references/evidence-and-assumptions.md", "references/traceability-and-ids.md", "references/audit-rubric.md",
-            "references/design-and-accessibility.md", "references/agentic-ai-extensions.md", "references/safe-updates.md",
+            "references/design-and-accessibility.md", "references/ux-interaction-patterns.md", "references/security-and-abuse-resistance.md",
+            "references/agentic-ai-extensions.md", "references/safe-updates.md",
             "assets/docs-manifest.json", "assets/config.schema.json", "assets/example-config.json", "scripts/cli.py",
             "scripts/install.py", "scripts/scan_workspace.py", "scripts/validate_skill.py", "scripts/validate_docs.py",
             "scripts/check_traceability.py", "scripts/report_audit.py"]

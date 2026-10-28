@@ -12,7 +12,7 @@
 | **TC-004** | Fresh `TicketAPI`. | POST body of 16,385 bytes. | 413 `body_too_large`. | Unit; run with fixture suite. |
 
 ## Last execution
-- **2026-10-28 17:04 UTC:** `python -m unittest discover -s src -v` from the sample-project root — PASS, 4 tests.
+- **2026-10-28 17:18 UTC:** `python -m unittest discover -s src -v` from the sample-project root — PASS, 4 tests.
 - The repository-level suite and its Windows symlink-specific skips are recorded in [_AUDIT_REPORT](_AUDIT_REPORT.md).
 
 ## Coverage and nonfunctional checks

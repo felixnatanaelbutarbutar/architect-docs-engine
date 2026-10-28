@@ -6,6 +6,8 @@ All notable changes to this repository are documented here. The format follows K
 
 ### Changed
 - Added product-specific anti-generic visual design guardrails, icon/color/layout rationale, and an explicit rendered-review checklist for applicable UI documentation.
+- Added threat-model guidance for authentication, object-level authorization, bots, resource exhaustion, AI prompt injection, tool misuse and least-privilege controls.
+- Added form-placement rules that use page/inline forms by default and avoid modal/popup forms without a product-specific reason.
 - Updated repository status text after the first GitHub publication; remote CI remains unverified.
 
 ## [0.1.0] - 2026-10-28

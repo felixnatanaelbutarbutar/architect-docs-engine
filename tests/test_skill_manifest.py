@@ -22,6 +22,19 @@ class SkillManifestTests(unittest.TestCase):
         self.assertIn("Visual review gate", guide)
         self.assertIn("does not itself render or certify a frontend", guide)
 
+    def test_security_guidance_covers_bots_and_agent_boundaries(self):
+        guide = (REPO / ".agents/skills/architect-docs-engine/references/security-and-abuse-resistance.md").read_text(encoding="utf-8")
+        self.assertIn("Bots, abuse, and resource limits", guide)
+        self.assertIn("prompt injection cannot be fully eliminated", guide.lower())
+        self.assertIn("outside the model", guide)
+        self.assertIn("OWASP Bot Management", guide)
+
+    def test_ux_guidance_does_not_default_forms_to_popups(self):
+        guide = (REPO / ".agents/skills/architect-docs-engine/references/ux-interaction-patterns.md").read_text(encoding="utf-8")
+        self.assertIn("page first, no popup by default", guide.lower())
+        self.assertIn("Do not put a primary, long, multi-step", guide)
+        self.assertIn("WAI-ARIA Authoring Practices", guide)
+
     def test_installer_copies_skill_and_is_idempotent(self):
         with tempfile.TemporaryDirectory(dir=REPO) as temp:
             target = Path(temp) / "target"

@@ -4,11 +4,11 @@ Repository ini sekarang berisi reusable Agent Skill `architect-docs-engine`, skr
 
 ## Validasi yang sudah dijalankan
 
-- Suite lokal: 26 tes dijalankan, 24 lulus, 2 tes symlink dilewati karena pembuatan symlink dibatasi Windows pada lingkungan ini.
+- Suite lokal: 29 tes dijalankan, 27 lulus, 2 tes symlink dilewati karena pembuatan symlink dibatasi Windows pada lingkungan ini.
 - Contoh proyek fiktif: 4 tes lulus.
 - Skill, config, dan audit struktur 21 dokumen: lulus pemeriksaan mekanis.
 - Traceability: 14 ID terdefinisi, 0 dangling, 0 duplikat.
-- Audit dokumen berstatus `BLOCKED` untuk kesiapan rilis karena 21 pernyataan unresolved masih memerlukan bukti; pemeriksaan mekanis dokumen tetap lulus. Kesiapan produksi diblokir sampai keputusan autentikasi, penyimpanan/retensi, transport, dan operasi ditetapkan.
+- Audit dokumen berstatus `BLOCKED` untuk kesiapan rilis karena 23 pernyataan unresolved masih memerlukan bukti; pemeriksaan mekanis dokumen tetap lulus. Kesiapan produksi diblokir sampai keputusan autentikasi, penyimpanan/retensi, transport, dan operasi ditetapkan.
 
 ## Pasang di workspace proyek
 
