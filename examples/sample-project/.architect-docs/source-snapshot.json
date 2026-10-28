@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-28T16:16:48+00:00",
+  "scope": "bounded non-document files under project root; content stored only as safe-file hashes",
+  "files": [
+    {
+      "path": "architect-docs.config.json",
+      "sha256": "c421821d1c2e8a5f3101712220015d45c9e79c674245b21fed9e57d083c549db",
+      "size_bytes": 684
+    },
+    {
+      "path": "project-brief.md",
+      "sha256": "ce0c2514ec7579f24e90be091b0769c50ce1a4ccca5435ed2e12b8c3f1c5fbad",
+      "size_bytes": 744
+    },
+    {
+      "path": "src/app.py",
+      "sha256": "d53ce662a928398bf979008f9533455fa6d6afb88a60fb8bd1fd4006725e4da8",
+      "size_bytes": 1677
+    },
+    {
+      "path": "src/test_app.py",
+      "sha256": "083176d11d10cdbd2282384e08e0a4c37d2bfa96d05f5e5542cc487ded8f01ea",
+      "size_bytes": 1279
+    }
+  ],
+  "unhashed_paths": [],
+  "summary": "Snapshot contains 4 hashed source/config files and 0 un-hashed paths.",
+  "project_root": "C:\\my-project\\architect-docs-engine\\examples\\sample-project",
+  "destination": "C:\\my-project\\architect-docs-engine\\examples\\sample-project\\.architect-docs\\source-snapshot.json",
+  "would_write": true
+}
