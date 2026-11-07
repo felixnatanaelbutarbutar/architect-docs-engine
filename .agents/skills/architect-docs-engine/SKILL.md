@@ -16,7 +16,7 @@ Use this skill for a coordinated project-documentation task. Do not activate it 
 
 `initialize`, `inspect`, `generate`, `update`, `audit`, `repair`, `plan`, `diff`, `dry-run`, and `help`.
 
-An agent can activate this skill from the user's request or through `/architect-docs-engine` where the Antigravity surface supports manual slash invocation. The skill format is portable; other hosts' discovery paths are unverified.
+Codex discovers repository skills under `.agents/skills/`; in Codex CLI or IDE, users can invoke this one with `$architect-docs-engine`. Antigravity can activate it from the user's request or through `/architect-docs-engine` where that surface supports manual skill invocation. Other hosts' discovery paths are unverified.
 
 ## Inputs and evidence
 

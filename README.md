@@ -1,10 +1,13 @@
 # Architect Docs Engine — Reusable Agent Skill for Evidence-Based Software Documentation
 
-Architect Docs Engine is a reusable [Agent Skill](https://agentskills.io/specification) for Google Antigravity that helps software teams produce and maintain **21 linked Markdown architecture documents**. It guides an AI coding agent through project discovery, evidence classification, documentation writing, requirement traceability, and repeatable quality audits. The bundled Python utilities inspect and validate local files; **the AI agent performs the semantic documentation writing**.
+Architect Docs Engine is a reusable [Agent Skill](https://agentskills.io/specification) for Codex and Google Antigravity that helps software teams produce and maintain **21 linked Markdown architecture documents**. It guides an AI coding agent through project discovery, evidence classification, documentation writing, requirement traceability, and repeatable quality audits. The bundled Python utilities inspect and validate local files; **the AI agent performs the semantic documentation writing**.
+
+**Panduan pemula Bahasa Indonesia:** [PANDUAN_PENGGUNAAN_ID.md](PANDUAN_PENGGUNAAN_ID.md) — includes Codex setup, greenfield projects that begin as a rough idea, all 21 documents, UI/UX guidance, security limits, and validation steps.
 
 ## Contents
 
 - [What it does](#what-it-does)
+- [Panduan Bahasa Indonesia](PANDUAN_PENGGUNAAN_ID.md)
 - [Key features](#key-features)
 - [How it works](#how-it-works)
 - [Repository structure](#repository-structure)
@@ -48,7 +51,7 @@ Architect Docs Engine establishes a repeatable workflow that separates semantic 
 
 ```mermaid
 flowchart TD
-    A[Project brief or existing codebase] --> B[Antigravity activates the skill]
+    A[Project brief or existing codebase] --> B[Codex or Antigravity activates the skill]
     B --> C[Inspect local evidence]
     C --> D[Identify requirements and proposed decisions]
     D --> E[Agent writes 21 documentation files]
@@ -69,6 +72,7 @@ architect-docs-engine/
 ├── README.md                         # You are here: public repository guide
 ├── ANTIGRAVITY_BUILD_PROMPT.md       # Original build brief retained as source material
 ├── START_HERE_ID.md                   # Indonesian quick guide to this repository
+├── PANDUAN_PENGGUNAAN_ID.md            # Full beginner guide in Indonesian
 ├── LICENSE
 ├── CONTRIBUTING.md
 ├── SECURITY.md
@@ -94,14 +98,14 @@ architect-docs-engine/
 
 ## Prerequisites
 
-- Google Antigravity with Agent Skills support; discovery and slash invocation depend on the available surface.
+- Codex with Agent Skills support or Google Antigravity; discovery and invocation depend on the host surface.
 - **Python 3.11+** to run the optional local installer, inspection, and audit utilities.
 - **Git** for cloning the repository; downloading the files directly is also possible.
 - A target project directory or a concise project brief.
 
-For supported discovery paths and invocation behavior, see the [official Antigravity Agent Skills guide](https://www.antigravity.google/docs/skills?tab=ide) and the [Agent Skills format specification](https://agentskills.io/specification).
+For Codex setup, see [OpenAI Learn: Build skills](https://learn.chatgpt.com/docs/build-skills) and [Codex customization](https://learn.chatgpt.com/docs/customization/overview). For Antigravity and the portable format, see the [official Antigravity Agent Skills guide](https://www.antigravity.google/docs/skills?tab=ide) and the [Agent Skills format specification](https://agentskills.io/specification).
 
-No API key or cloud service is required for the offline Python validation scripts. Agent-driven generation requires an available AI coding agent in Antigravity; its availability and permissions depend on your environment.
+No API key or cloud service is required for the offline Python validation scripts. Agent-driven generation requires an available AI coding agent in Codex or Antigravity; its availability and permissions depend on your environment.
 
 ## Installation
 
@@ -143,7 +147,7 @@ my-app/
             └── scripts/
 ```
 
-Open `my-app` in Antigravity. The skill can now be used in that workspace. Commit the skill folder to the target project's repository only if you want to share the installed skill with the team.
+Open `my-app` in Codex or Antigravity. In Codex CLI or IDE, invoke `$architect-docs-engine` or describe the documentation task in natural language. In Antigravity, use `/architect-docs-engine` on surfaces that support manual skill commands, or ask in natural language. Commit the skill folder to the target project's repository only if you want to share the installed skill with the team.
 
 ### Install — global scope
 
@@ -166,7 +170,7 @@ For manual installation, copy the **entire** `.agents/skills/architect-docs-engi
 
 ## Quick start
 
-After installing the skill, **open the target project's root directory** in Antigravity. You can invoke `/architect-docs-engine` in surfaces that support manual skill commands, or ask in natural language.
+After installing the skill, **open the target project's root directory** in Codex or Antigravity. In Codex CLI or IDE, invoke `$architect-docs-engine` or ask in natural language. In Antigravity, invoke `/architect-docs-engine` where supported or ask in natural language.
 
 **1. Create docs from a new project brief**
 
@@ -220,7 +224,7 @@ jalankan audit. Jangan mengubah source code aplikasi.
 | `dry-run` | Preview actions without modifying target files | Agent/script depending on command |
 | `help` | Explain the skill workflow or local command options | AI agent or Python CLI |
 
-**Important:** The Python CLI is not a substitute for the Antigravity agent. It cannot create reliable architecture descriptions without source evidence and semantic interpretation.
+**Important:** The Python CLI is not a substitute for the Codex or Antigravity agent. It cannot create reliable architecture descriptions without source evidence and semantic interpretation.
 
 ## Configuration
 
@@ -346,7 +350,7 @@ The fictional sample project in `examples/sample-project/` provides a small sour
 
 To repeat the end-to-end process:
 
-1. Open `examples/sample-project/` as the target workspace in Antigravity after installing the skill.
+1. Open `examples/sample-project/` as the target workspace in Codex or Antigravity after installing the skill.
 2. Ask: `Use architect-docs-engine to inspect the sample and regenerate its 21-document suite. Keep the synthetic fixture labels and verify traceability.`
 3. Review `examples/sample-project/docs/README.md` and `TRACEABILITY.md`, especially every `Unresolved`, `Proposed`, or `N/A` decision.
 4. Run the `audit` and `traceability` commands shown above.
@@ -406,7 +410,7 @@ The repository's `.github/workflows/ci.yml` runs both offline test suites, valid
 
 | Symptom | What to check |
 | --- | --- |
-| Skill does not appear in Antigravity | Confirm the **folder** is at `<target>/.agents/skills/architect-docs-engine/` and contains `SKILL.md`; reopen/reload the workspace if necessary. |
+| Skill does not appear in Codex or Antigravity | Confirm the **folder** is at `<target>/.agents/skills/architect-docs-engine/` and contains `SKILL.md`; reopen/reload the workspace if necessary. |
 | Slash command is unavailable | Some surfaces may use automatic activation or differ in command support. Request `Use architect-docs-engine ...` naturally. |
 | Skill activates in the wrong project | Check the currently open workspace and explicitly name the intended target directory before writing. |
 | `docs/` has fewer than 21 files | Confirm a **full generate** run, then use the `audit` CLI and review missing-file findings. |
@@ -444,7 +448,7 @@ No. It is a reusable set of instructions, references, templates, and local valid
 Not by default. It produces and maintains architecture documentation and validation reports. Implementation can be a separate agent task governed by those docs.
 
 **Do I need an LLM API key?**<br>
-No key is required for the Python tests or audit scripts. Document generation relies on the AI capabilities already available to you in Antigravity.
+No key is required for the Python tests or audit scripts. Document generation relies on the AI capabilities already available to you in Codex or Antigravity.
 
 **Can it document a non-AI or backend-only project?**<br>
 Yes. Non-applicable sections get evidence-backed explanations rather than fabricated UI or LLM features.
@@ -458,8 +462,8 @@ Yes, through review-first workflows. It must not blindly overwrite human-authore
 **Does it deploy my app or create a GitHub repository?**<br>
 No. It does not deploy, automatically commit, or publish your source. You control the GitHub remote and publication.
 
-**Can I use this with Claude Code, Cursor, or Codex?**<br>
-The Agent Skills format is portable in principle, but each host has its own discovery path and behavior. Treat any additional host support as unverified until its installation and invocation have been tested.
+**Can I use this with Codex, Claude Code, or Cursor?**<br>
+Codex supports repo-local skills under `.agents/skills/` and explicit `$architect-docs-engine` invocation in CLI or IDE surfaces; see the linked [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills). Claude Code and Cursor have their own discovery and invocation rules; treat compatibility with those hosts as unverified until tested.
 
 ---
 

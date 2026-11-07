@@ -5,6 +5,8 @@ All notable changes to this repository are documented here. The format follows K
 ## [Unreleased]
 
 ### Changed
+- Added a full beginner-friendly Indonesian usage guide covering Codex and Antigravity, greenfield ideas, the 21-document suite, UI/UX, security, and validation.
+- Documented Codex repository-skill discovery and explicit invocation alongside Antigravity usage.
 - Added product-specific anti-generic visual design guardrails, icon/color/layout rationale, and an explicit rendered-review checklist for applicable UI documentation.
 - Added threat-model guidance for authentication, object-level authorization, bots, resource exhaustion, AI prompt injection, tool misuse and least-privilege controls.
 - Added form-placement rules that use page/inline forms by default and avoid modal/popup forms without a product-specific reason.
