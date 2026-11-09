@@ -70,9 +70,8 @@ The agent provides reasoning and writing. The local Python tools supply determin
 ```text
 architect-docs-engine/
 ├── README.md                         # You are here: public repository guide
-├── ANTIGRAVITY_BUILD_PROMPT.md       # Original build brief retained as source material
-├── START_HERE_ID.md                   # Indonesian quick guide to this repository
-├── PANDUAN_PENGGUNAAN_ID.md            # Full beginner guide in Indonesian
+├── START_HERE_ID.md                  # Indonesian quick guide to this repository
+├── PANDUAN_PENGGUNAAN_ID.md          # Full beginner guide in Indonesian
 ├── LICENSE
 ├── CONTRIBUTING.md
 ├── SECURITY.md

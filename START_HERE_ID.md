@@ -4,4 +4,4 @@ Untuk panduan pemula dalam Bahasa Indonesia, termasuk cara memasang skill di Cod
 
 Ringkasnya: pasang skill ke folder proyek yang sudah ada, buka proyek itu di AI coding agent, lalu minta agent memakai `architect-docs-engine`. Skill dapat membuat dokumentasi awal walaupun proyek masih berupa ide; hal yang belum diketahui harus ditandai sebagai usulan atau belum terjawab, bukan ditebak.
 
-`README.md` menjelaskan repository dan pemasangan dalam Bahasa Inggris. `ANTIGRAVITY_BUILD_PROMPT.md` adalah brief sumber pembangunan skill ini.
+`README.md` menjelaskan repository dan pemasangan dalam Bahasa Inggris. Kedua panduan menunjukkan isi repo yang dibutuhkan untuk memakai skill ini.

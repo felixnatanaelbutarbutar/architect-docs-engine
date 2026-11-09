@@ -1,18 +1,39 @@
+# Python caches and generated artifacts
 __pycache__/
 *.py[cod]
+*$py.class
 .venv/
 venv/
+ENV/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+build/
+dist/
+*.egg-info/
 .coverage
+.coverage.*
 htmlcov/
-.DS_Store
-Thumbs.db
+
+# Local secrets and environment files
 .env
 .env.*
 !.env.example
 !.env.sample
 .aws/
 .gemini/
+
+# Local tool state and generated documentation snapshots
 .architect-docs/
 !examples/sample-project/.architect-docs/
 !examples/sample-project/.architect-docs/source-snapshot.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Private authoring material; not needed to use the published skill
+ANTIGRAVITY_BUILD_PROMPT.md
