@@ -1,4 +1,9 @@
-# Architect Docs Engine — Reusable Agent Skill for Evidence-Based Software Documentation
+<p align="center">
+  <img src="assets/brand/logo.png" alt="Architect Docs Engine logo" width="176">
+</p>
+
+<h1 align="center">Architect Docs Engine</h1>
+<p align="center"><strong>Evidence-based architecture documentation for AI coding agents</strong></p>
 
 Architect Docs Engine is a reusable [Agent Skill](https://agentskills.io/specification) for Codex and Google Antigravity that helps software teams produce and maintain **21 linked Markdown architecture documents**. It guides an AI coding agent through project discovery, evidence classification, documentation writing, requirement traceability, and repeatable quality audits. The bundled Python utilities inspect and validate local files; **the AI agent performs the semantic documentation writing**.
 
@@ -9,6 +14,7 @@ Architect Docs Engine is a reusable [Agent Skill](https://agentskills.io/specifi
 - [What it does](#what-it-does)
 - [Panduan Bahasa Indonesia](PANDUAN_PENGGUNAAN_ID.md)
 - [Key features](#key-features)
+- [Premium edition](#premium-edition)
 - [How it works](#how-it-works)
 - [Repository structure](#repository-structure)
 - [Prerequisites](#prerequisites)
@@ -47,6 +53,17 @@ Architect Docs Engine establishes a repeatable workflow that separates semantic 
 - **Keep forms in context.** Use a page or inline form by default; do not turn ordinary forms into modal/popup flows without an explicit reason.
 - **Use portable, readable files.** Generated docs remain plain Markdown and Mermaid rather than depending on a proprietary documentation server.
 
+## Premium edition
+
+The free GitHub edition already includes the complete 21-document workflow and local validation tools. The Premium pack adds four linked handoff files for teams that need to move from documentation into coordinated work:
+
+- **Decision Register** for owners, evidence, trade-offs, and unresolved choices.
+- **Implementation Backlog** with ordered tasks, dependencies, acceptance checks, and verification evidence.
+- **Security Verification Matrix** connecting project-specific threats to controls and safe checks.
+- **UI Review Scorecard** for user flows, layout, visual hierarchy, responsive behavior, and accessibility review.
+
+The Premium Agensi listing is still being prepared and is not available for purchase yet. A direct link will be added here after the listing is approved and live.
+
 ## How it works
 
 ```mermaid
@@ -72,6 +89,7 @@ architect-docs-engine/
 ├── README.md                         # You are here: public repository guide
 ├── START_HERE_ID.md                  # Indonesian quick guide to this repository
 ├── PANDUAN_PENGGUNAAN_ID.md          # Full beginner guide in Indonesian
+├── assets/brand/logo.png             # Repository and README logo
 ├── LICENSE
 ├── CONTRIBUTING.md
 ├── SECURITY.md
